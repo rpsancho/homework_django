@@ -4,7 +4,7 @@
         "pk": 1,
         "fields": {
             "name": "салаты",
-            "description": "салаты"
+            "description": "Салаты и закуски"
         }
     },
     {
@@ -12,7 +12,7 @@
         "pk": 2,
         "fields": {
             "name": "супы",
-            "description": "супы"
+            "description": "Супы, бульоны"
         }
     },
     {
@@ -20,7 +20,7 @@
         "pk": 3,
         "fields": {
             "name": "вторые блюда",
-            "description": "вторые блюда"
+            "description": "Вторые блюда"
         }
     },
     {
@@ -28,7 +28,184 @@
         "pk": 4,
         "fields": {
             "name": "напитки",
-            "description": "напитки"
+            "description": "Чай, кофе, морс, компот, сок и др."
+        }
+    },
+    {
+        "model": "catalog.category",
+        "pk": 5,
+        "fields": {
+            "name": "гарниры",
+            "description": "Гарниры"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 1,
+        "fields": {
+            "name": "Цезарь",
+            "description": "Куриное филе, сыр, помидоры, салат, сухари, чеснок, майонез.\r\n150 гр.",
+            "preview": "products/e2681c4022faeff7ac769c4ab95d7bfa.jpg",
+            "category": 1,
+            "price": 200.0,
+            "created_at": "2024-02-13",
+            "updated_at": "2024-02-13"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 2,
+        "fields": {
+            "name": "Гнездо глухаря",
+            "description": "Картофель, курица, грибы консервированные, майонез, сыр, перепелиное яйцо, масло, зелень. 150 гр.",
+            "preview": "products/9384b9f8793a6275316e31258a67e1c2.jpeg",
+            "category": 1,
+            "price": 190.0,
+            "created_at": "2024-02-13",
+            "updated_at": "2024-02-13"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 3,
+        "fields": {
+            "name": "Фунчоза с курицей",
+            "description": "Куриное филе, фунчоза, перец болгарский, морковь, огурец, специи, масло подсолнечное. 150 гр.",
+            "preview": "products/79b63250-c345-4ae2-8310-890ae0165560.jpg",
+            "category": 1,
+            "price": 180.0,
+            "created_at": "2024-02-13",
+            "updated_at": "2024-02-13"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 4,
+        "fields": {
+            "name": "Сельдь под шубой",
+            "description": "Сельдь, свёкла, картофель, морковь, лук, яйцо, майонез. 120 гр.",
+            "preview": "products/seld_pod_shuboj.jpg",
+            "category": 1,
+            "price": 95.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 5,
+        "fields": {
+            "name": "Борщ",
+            "description": "Бульон говяжий, картофель, говядина, капуста, свекла, лук репчатый, морковь, перец болгарский, фасоль консервированная, томатная паста, масло подсолнечное, уксус, соль, сахар, чеснок, перец черный, зелень. 280 гр.",
+            "preview": "products/borsch_s_govyadinoj.jpg",
+            "category": 2,
+            "price": 110.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 6,
+        "fields": {
+            "name": "Бульон куриный с сухариками",
+            "description": "Бульон куриный, курица, зелень, специи, сухарики пшеничные. 250 гр.",
+            "preview": "products/bulion_kurinyj.jpg",
+            "category": 2,
+            "price": 100.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 7,
+        "fields": {
+            "name": "Манты",
+            "description": "Говядина, свинина, мука пшеничная в/с, лук репчатый, яйцо, соль, специи. 50 гр. / шт.",
+            "preview": "products/manty.jpg",
+            "category": 3,
+            "price": 60.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 8,
+        "fields": {
+            "name": "Бифштекс с яйцом",
+            "description": "Говядина, свинина, мука пшеничная в/с, масло подсолнечное, яйцо, соль, перец черный. 130 гр.",
+            "preview": "products/bifshteks_s_yaitsom.jpg",
+            "category": 3,
+            "price": 140.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 9,
+        "fields": {
+            "name": "Камбала жареная",
+            "description": "Камбала, мука пшеничная в/с, масло подсолнечное, лимон, соль, перец черный молотый, специи. Цена за 100 гр.",
+            "preview": "products/kambala_zharenaya.png",
+            "category": 3,
+            "price": 120.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 10,
+        "fields": {
+            "name": "Картофельное пюре",
+            "description": "Картофель, масло сливочное, молоко, соль. Цена за 100 гр.",
+            "preview": "products/pure_kartofelnoe.jpg",
+            "category": 5,
+            "price": 50.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 11,
+        "fields": {
+            "name": "Овощи запеченные",
+            "description": "Кабачки, перец болгарский, помидоры, лук репчатый, маринад, масло подсолнечное. Цена за 100 гр.",
+            "preview": "products/ovoshi_zapechennye.jpg",
+            "category": 5,
+            "price": 150.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 12,
+        "fields": {
+            "name": "Чай чёрный",
+            "description": "Чай чёрный крупнолистовой. 200 гр.",
+            "preview": "products/chay_cherniy.jpg",
+            "category": 4,
+            "price": 25.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
+        }
+    },
+    {
+        "model": "catalog.product",
+        "pk": 13,
+        "fields": {
+            "name": "Сок в ассортименте",
+            "description": "Сок яблочный, виноградный, вишнёвый, апельсиновый, ананасовый. 240 гр.",
+            "preview": "",
+            "category": 4,
+            "price": 100.0,
+            "created_at": "2024-02-18",
+            "updated_at": "2024-02-18"
         }
     }
 ]
