@@ -24,6 +24,8 @@
             {{object.category.name}}
           </li>
         </ul>
+        <a class="p-2 btn btn-outline-primary" href="{% url "catalog:update" object.pk %}">Изменить продукт</a>
+        <a class="p-2 btn btn-outline-primary" href="{% url "catalog:delete" object.pk %}">Удалить продукт</a>
       </div>
     </div>
   </div>
