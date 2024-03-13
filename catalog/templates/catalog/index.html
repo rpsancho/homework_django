@@ -7,10 +7,10 @@
     <div class="col-4">
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h4 class="my-0 font-weight-normal">{{object.name}}</h4>
+          <h4 class="my-0 font-weight-normal">{{object.product.name}}</h4>
         </div>
         <div class="card-body ">
-          <h1 class="card-title pricing-card-title">{{object.price}}</h1>
+          <h1 class="card-title pricing-card-title">{{object.product.price}}</h1>
           <ul class="list-unstyled mt-3 mb-4 text-start m-3">
             <li>
               <b>Описание</b><br>
@@ -18,12 +18,12 @@
             </li>
             <li>
                 <a href="/products/{{object.pk}}/">
-                    <img src="{% mediapath object.preview %}" class="img-thumbnail" alt="...">
+                    <img src="{% mediapath object.product.preview %}" class="img-thumbnail" alt="...">
                 </a>
             </li>
             <li>
               <b>Категория</b><br>
-              {{object.category.name}}
+              {{object.product.category.name}}
             </li>
           </ul>
         </div>
