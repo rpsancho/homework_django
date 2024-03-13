@@ -1,15 +1,16 @@
 from django.views.generic import DetailView, TemplateView
 from django.views.generic.list import ListView
 
-from catalog.models import Product
+from catalog.models import Product, Version
 
 
 class ProductListView(ListView):
-    model = Product
+    model = Version
     template_name = 'catalog/index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['object_list'] = Version.objects.filter(is_current_version=True).select_related('product')
         context["title"] = 'home'
         return context
 

@@ -1,13 +1,15 @@
 from django.urls import reverse
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
 from pytils.translit import slugify
+from blog.forms import BlogCreateForm
 
 from blog.models import Blog
 
 
 class BlogCreateView(CreateView):
     model = Blog
-    fields = ('title', 'content', 'preview', 'is_published')
+    form_class = BlogCreateForm
+    # fields = ('title', 'content', 'preview', 'is_published')
     success_url = '/blog/'
 
     def form_valid(self, form):
