@@ -3,7 +3,6 @@ from django.views.generic import CreateView, DeleteView, DetailView, ListView, U
 from pytils.translit import slugify
 
 from blog.forms import BlogCreateForm
-from blog.forms import BlogCreateForm
 
 from blog.models import Blog
 
@@ -42,8 +41,8 @@ class BlogDetailView(DetailView):
 
 class BlogUpdateView(UpdateView):
     model = Blog
-    fields = ('title', 'content', 'preview', 'is_published')
-    success_url = '/blog/'
+    form_class = BlogCreateForm
+    # success_url = '/blog/'
 
     def form_valid(self, form):
         if form.is_valid():
