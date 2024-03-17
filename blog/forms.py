@@ -16,7 +16,7 @@ class BlogCreateForm(StyleFormMixin, forms.ModelForm):
             return cleaned_data
 
     def clean_content(self):
-        cleaned_data = self.cleaned_data['conttent']
+        cleaned_data = self.cleaned_data['content']
 
         if is_acceptable(cleaned_data):
             return cleaned_data
