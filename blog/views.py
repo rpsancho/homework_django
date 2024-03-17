@@ -1,6 +1,7 @@
 from django.urls import reverse
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
 from pytils.translit import slugify
+
 from blog.forms import BlogCreateForm
 
 from blog.models import Blog
