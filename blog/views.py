@@ -3,6 +3,7 @@ from django.views.generic import CreateView, DeleteView, DetailView, ListView, U
 from pytils.translit import slugify
 
 from blog.forms import BlogCreateForm
+from blog.forms import BlogCreateForm
 
 from blog.models import Blog
 
