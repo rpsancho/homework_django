@@ -2,33 +2,41 @@
 {% block content %}
 {% load tags %}
 
-<div class="row text-center">
-{% for object in object_list %}
-    <div class="col-4">
-      <div class="card mb-4 box-shadow">
-        <div class="card-header">
-          <h4 class="my-0 font-weight-normal">{{object.product.name}}</h4>
-        </div>
-        <div class="card-body ">
-          <h1 class="card-title pricing-card-title">{{object.product.price}}</h1>
-          <ul class="list-unstyled mt-3 mb-4 text-start m-3">
-            <li>
-              <b>Описание</b><br>
-              {{object.description|slice:100}}
-            </li>
-            <li>
-                <a href="/products/{{object.pk}}/">
-                    <img src="{% mediapath object.product.preview %}" class="img-thumbnail" alt="...">
-                </a>
-            </li>
-            <li>
-              <b>Категория</b><br>
-              {{object.product.category.name}}
-            </li>
-          </ul>
+<div class='col-10'>
+  <a class="p-2 mb-5 btn btn-outline-primary" href="{% url "catalog:create" %}">Создать продукт</a>
+
+  <div class="row text-center">
+  {% for object in object_list %}
+      <div class="col-4">
+        <div class="card mb-4 box-shadow">
+          <div class="card-header">
+            <h4 class="my-0 font-weight-normal">{{object.name}}</h4>
+          </div>
+          <div class="card-body ">
+            <h1 class="card-title pricing-card-title">{{object.price}}</h1>
+            <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+              <li>
+                <b>Описание</b><br>
+                {{object.description|slice:100}}
+              </li>
+              <li>
+                  <a href="/product/view/{{object.pk}}/">
+                      <img src="{% mediapath object.preview %}" class="img-thumbnail" alt="...">
+                  </a>
+              </li>
+              <li>
+                <b>Категория</b><br>
+                {{object.category.name}}
+              </li>
+              <li>
+                <b>Версия</b><br>
+                {{object.version_number}}
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-{% endfor %}
+  {% endfor %}
+  </div>
 </div>
 {% endblock content %}

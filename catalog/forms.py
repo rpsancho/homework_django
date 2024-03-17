@@ -1,32 +1,13 @@
 from django import forms
+from app.common.apps_common import StyleFormMixin, is_acceptable
 
 from catalog.models import Product
 
 
-def is_acceptable(data):
-    forbidden_words = [
-        "казино",
-        "криптовалюта",
-        "крипта",
-        "биржа",
-        "дешево",
-        "бесплатно",
-        "обман",
-        "полиция",
-        "радар",
-    ]
-
-    for word in forbidden_words:
-        if word in data:
-            raise forms.ValidationError("Текст содержит запрещённые слова")
-
-    return True
-
-
-class ProductCreateForm(forms.ModelForm):
+class ProductCreateForm(StyleFormMixin, forms.ModelForm):
     class Meta:
         model = Product
-        fields = "__all__"
+        exclude = ('created_at', 'updated_at',)
 
     def clean_name(self):
         cleaned_data = self.cleaned_data["name"]
