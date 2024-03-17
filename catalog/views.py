@@ -14,7 +14,7 @@ class ProductCreateView(CreateView):
 
 
 class ProductListView(ListView):
-    model = Product
+    model = Version
     template_name = 'catalog/index.html'
 
     def get_context_data(self, **kwargs):
