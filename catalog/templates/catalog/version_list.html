@@ -1,0 +1,33 @@
+{% extends "catalog/base.html" %}
+{% block content %}
+{% load tags %}
+
+<a class="p-2 mb-5 btn btn-outline-primary" href="{% url "blog:create" %}">Создать версию</a>
+
+<div class="row text-center">
+{% for object in object_list %}
+    <div class="col-4">
+      <div class="card mb-4 box-shadow">
+        <div class="card-body ">
+          <ul class="list-unstyled mt-3 mb-4 text-start m-3">
+            <li>
+              <b>Номер версии: </b>{{object.version_number}}<br>
+            </li>
+            <li>
+              <b>Название версии: </b>{{object.version_name}}<br>
+            </li>
+            <li>
+              <b>Продукт: </b>{{object.product}}<br>
+            </li>
+            <li>
+              <b>Признак текущей версии: </b>{{object.is_current_version}}
+            </li>
+          </ul>
+          <a class="p-2 btn btn-outline-primary" href="{% url "catalog:update_ver" object.pk %}">Изменить версию</a>
+          <a class="p-2 btn btn-outline-primary" href="{% url "catalog:delete_ver" object.pk %}">Удалить версию</a>
+        </div>
+      </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock content %}

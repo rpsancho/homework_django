@@ -8,9 +8,9 @@
       <form method="post" action="" class="form-floating">
         {% csrf_token %}
         {{form}}
-        <p>Удалить продукт {{object.title}}?</p>
+        <p>Удалить версию {{object.title}}?</p>
         <button type="submit" value="Confirm" class="btn btn-lg btn-block btn-outline-primary">Да</button>
-        <a class="btn btn-lg btn-block btn-outline-primary" href="{% url "catalog:view" object.pk %}">Нет</a>
+        <a class="btn btn-lg btn-block btn-outline-primary" href="{% url "catalog:list_ver" %}">Нет</a>
       </form>
     </div>
   </div>
