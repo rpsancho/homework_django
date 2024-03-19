@@ -3,11 +3,13 @@ from django import forms
 
 class StyleFormMixin():
 
+    BOOL_FIELDS = ['is_published', 'is_current_version',]
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
-            if field_name == 'is_published':
+            if field_name in self.BOOL_FIELDS:
                 field.widget.attrs['class'] += ' form-check-input'
 
 

@@ -1,0 +1,16 @@
+{% extends 'catalog/base.html' %}
+{% block content %}
+
+<div class="col-lg-6 col-md-6 col-sm-12">
+  <div class="card mb-4 box-shadow">
+    <div class="card-body">
+      <form method="post" action="" class="form-floating" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" value="Save" class="btn btn-lg btn-block btn-outline-primary">Применить</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

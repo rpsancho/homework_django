@@ -10,12 +10,14 @@
     <div class="container">
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
-            {% url "catalog:index" as url %}
-            <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">Home</a></li>
-            {% url "blog:list" as url %}
-            <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">Blog</a></li>
-            {% url "catalog:about" as url %}
-            <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">About</a></li>
+                {% url "catalog:index" as url %}
+                <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">Home</a></li>
+                {% url "catalog:list_ver" as url %}
+                <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">Version</a></li>
+                {% url "blog:list" as url %}
+                <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">Blog</a></li>
+                {% url "catalog:about" as url %}
+                <li class="nav-item"><a href="{{ url }}" class="nav-link {% if request.path == url %}active{% endif %}">About</a></li>
             </ul>
         </header>
     </div>
